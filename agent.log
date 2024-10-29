@@ -1,0 +1,68 @@
+2024-10-28 16:08:21,536 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:08:21,537 - __main__ - ERROR - Failed to initialize QueryAnalyzer: OPENAI_API_KEY environment variable is not set
+2024-10-28 16:09:26,187 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:09:26,187 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:09:26,187 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:15:45,388 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:15:45,389 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:15:45,389 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:35:38,610 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:35:38,611 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:35:38,611 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:39:40,234 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:39:40,234 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:39:40,234 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:40:15,714 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:40:15,714 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:40:15,714 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:41:20,838 - __main__ - INFO - Received query: How many pods are running?
+2024-10-28 16:41:21,202 - __main__ - INFO - Successfully updated knowledge base
+2024-10-28 16:41:21,202 - __main__ - ERROR - Error analyzing query: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-28 16:41:21,202 - __main__ - INFO - Final answer: Error analyzing query
+2024-10-28 16:45:22,959 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:45:22,960 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:45:22,960 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:45:32,146 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:45:32,146 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:45:32,146 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:46:00,952 - __main__ - INFO - Received query: How many pods are running?
+2024-10-28 16:46:01,110 - __main__ - INFO - Successfully updated knowledge base
+2024-10-28 16:46:01,110 - __main__ - ERROR - Error analyzing query: module 'kubernetes.client' has no attribute 'chat'
+2024-10-28 16:46:01,110 - __main__ - INFO - Final answer: Error analyzing query: module 'kubernetes.client' has no attribute 'chat'
+2024-10-28 16:48:59,489 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:48:59,516 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:48:59,516 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:49:06,063 - __main__ - INFO - Received query: How many pods are running?
+2024-10-28 16:49:06,193 - __main__ - INFO - Successfully updated knowledge base
+2024-10-28 16:49:07,519 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-28 16:49:07,526 - __main__ - INFO - OpenAI response: There are 8 pods running.
+2024-10-28 16:49:07,526 - __main__ - ERROR - Error analyzing query: name 're' is not defined
+2024-10-28 16:49:07,526 - __main__ - INFO - Final answer: Error analyzing query: name 're' is not defined
+2024-10-28 16:50:07,580 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:50:07,592 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:50:07,592 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:50:12,390 - __main__ - INFO - Received query: How many pods are running?
+2024-10-28 16:50:12,521 - __main__ - INFO - Successfully updated knowledge base
+2024-10-28 16:50:13,468 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-28 16:50:13,478 - __main__ - INFO - OpenAI response: There are 8 pods running.
+2024-10-28 16:50:13,479 - __main__ - INFO - Final answer: There are 8 pods running.
+2024-10-28 16:51:35,229 - __main__ - INFO - Received query: How many nodes are there in the cluster?
+2024-10-28 16:51:36,522 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-28 16:51:36,529 - __main__ - INFO - OpenAI response: There is 1 node in the cluster.
+2024-10-28 16:51:36,529 - __main__ - INFO - Final answer: There is 1 node in the cluster.
+2024-10-28 16:56:26,423 - __main__ - INFO - Successfully initialized K8sDataExtractor
+2024-10-28 16:56:26,433 - __main__ - INFO - Successfully initialized QueryAnalyzer
+2024-10-28 16:56:26,433 - __main__ - INFO - Query Orchestrator initialized
+2024-10-28 16:56:33,579 - __main__ - INFO - Received query: How many nodes are there in the cluster?
+2024-10-28 16:56:33,710 - __main__ - INFO - Successfully updated knowledge base
+2024-10-28 16:56:34,471 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-28 16:56:34,476 - __main__ - INFO - Final answer: 1
