@@ -27,7 +27,7 @@ class QueryResponse(BaseModel):
     query: str
     answer: str
 
-class K8sDataExtractor:
+class DataExtractor:
     """Agent responsible for extracting Kubernetes cluster information."""
     
     def __init__(self):
@@ -40,9 +40,9 @@ class K8sDataExtractor:
             self.knowledge_base = {}
             self.last_update = None
             self.update_interval = 300  # 5 minutes
-            logger.info("Successfully initialized K8sDataExtractor")
+            logger.info("Successfully initialized DataExtractor")
         except Exception as e:
-            logger.error(f"Failed to initialize K8sDataExtractor: {str(e)}")
+            logger.error(f"Failed to initialize DataExtractor: {str(e)}")
             raise
 
     def extract_kubernetes_data(self) -> Dict[str, List[Dict[str, Any]]]:
@@ -206,7 +206,7 @@ class QueryAnalyzer:
         """Initialize the Query Analyzer."""
         try:
             # Create OpenAI client
-            self.client = OpenAI(api_key='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')  # Replace with your actual API key
+            self.client = OpenAI(api_key= os.getenv("OPENAI_API_KEY"))  
             logger.info("Successfully initialized QueryAnalyzer")
         except Exception as e:
             logger.error(f"Failed to initialize QueryAnalyzer: {str(e)}")
@@ -266,7 +266,7 @@ class QueryOrchestrator:
     """Orchestrates the interaction between the data extractor and query analyzer."""
     
     def __init__(self):
-        self.extractor = K8sDataExtractor()
+        self.extractor = DataExtractor()
         self.analyzer = QueryAnalyzer()
         logger.info("Query Orchestrator initialized")
 
